@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/background_light_blue"
+    tools:context=".EventsActivity">
+
+    <TextView
+        android:id="@+id/tv_events_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Events at Ship Campus"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/dark_blue"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/ll_event_list"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_events_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Event 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:background="@drawable/rounded_event_item"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/tv_event1_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ship Campus Tour"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/dark_blue"/>
+
+            <TextView
+                android:id="@+id/tv_event1_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Explore the fascinating Ship Campus with guided tours. Learn about the campus's history and enjoy interactive exhibits."
+                android:layout_marginTop="8dp"/>
+
+            <Button
+                android:id="@+id/btn_book_event1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Book Reservation"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/rounded_button"
+                android:textColor="@android:color/white"
+                android:padding="12dp"/>
+        </LinearLayout>
+
+        <!-- Event 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:background="@drawable/rounded_event_item"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/tv_event2_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ship Technology Workshop"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/dark_blue"/>
+
+            <TextView
+                android:id="@+id/tv_event2_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Join our workshop on the latest advancements in ship technology. Hands-on sessions and expert talks await you."
+                android:layout_marginTop="8dp"/>
+
+            <Button
+                android:id="@+id/btn_book_event2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Book Reservation"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/rounded_button"
+                android:textColor="@android:color/white"
+                android:padding="12dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_manage_booking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/rounded_button"
+        android:padding="12dp"
+        android:text="Manage Booking"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_back_to_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/rounded_button"
+        android:padding="12dp"
+        android:text="Logout"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.816"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ManageBookingActivity">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tv_manage_booking_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Manage Your Booking"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/dark_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Instructions for managing booking -->
+    <TextView
+        android:id="@+id/tv_instructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Here you can view, edit, or cancel your current booking. Make sure to check the details carefully before making any changes."
+        android:textSize="16sp"
+        android:textColor="@color/dark_gray"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_manage_booking_title" />
+
+    <!-- Current Booking Section -->
+    <TextView
+        android:id="@+id/tv_current_booking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Booking:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/dark_blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_instructions"
+        android:layout_marginTop="24dp" />
+
+    <!-- Booking Details Display -->
+    <TextView
+        android:id="@+id/tv_booking_details"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@drawable/rounded_background"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_current_booking"
+        android:layout_marginTop="16dp"
+        android:text="You have a reservation on [Date] at [Time].\n\nDetails:\nDate: [Reservation Date]\nTime: [Reservation Time]\n\nFeel free to edit or cancel your booking below." />
+
+    <!-- Edit Booking Button -->
+    <Button
+        android:id="@+id/btn_edit_booking"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Edit Booking"
+        android:textColor="@android:color/white"
+        android:background="@drawable/rounded_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_booking_details"
+        android:layout_marginTop="24dp" />
+
+    <!-- Cancel Booking Button -->
+    <Button
+        android:id="@+id/btn_cancel_booking"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Cancel Booking"
+        android:textColor="@android:color/white"
+        android:background="@drawable/rounded_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_edit_booking"
+        android:layout_marginTop="16dp" />
+
+    <!-- Back to Events Button -->
+    <Button
+        android:id="@+id/btn_back_to_events_from_manage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Back to Events"
+        android:textColor="@android:color/white"
+        android:background="@drawable/rounded_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_cancel_booking"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
